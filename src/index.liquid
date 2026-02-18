@@ -3,11 +3,11 @@ layout: layouts/default
 ---
 <h1>Daniel Violin Lönnesjö</h1>
 
-<article>
+<div>
   {% assign image_ID = "joe001.jpg" %}
   {% assign image_className = "small" %}
   {% include "components/image" %}
-</article>
+</div>
 
 <p>
   Artist based in Haverdal, Sweden.
@@ -29,22 +29,3 @@ layout: layouts/default
     rel="noopener nofollow"
     title="Daniel Violin Lönnesjö Instagram">Instagram</a>
 </p>
-
-
-{% comment %} <div id="portfolio">
-              <article>
-                {% assign image_ID = "joe001.jpg" %}
-                {% assign image_alt = "Joe by the Book #001" %}
-                {% assign image_className = "small" %}
-                {% include "components/image" %}
-              </article>
-              <article>
-                {% assign image_ID = "joe000.jpg" %}
-                {% assign image_alt = "Joe by the Book #000" %}
-                {% assign image_className = "regular" %}
-                {% include "components/image" %}
-              </article>
-            </div>
-            
-            {% assign posts = collections.posts | reverse %}
-{% include "components/posts.liquid" %} {% endcomment %}

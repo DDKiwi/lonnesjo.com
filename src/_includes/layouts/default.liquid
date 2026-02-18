@@ -1,7 +1,6 @@
 ---
 title: Daniel Violin Lönnesjö
 description: ""
-nav: true
 ---
 
 {% assign pageTitle = post.fields.title | default: title %}
@@ -25,11 +24,11 @@ nav: true
     <link rel="icon" href="assets/favicon/favicon.ico">
 
     {% capture css %}
-        {% include "css/style.css" %}
+        {% include "css/base.css" %}
     {% endcapture %}
 
     <style>
-    {{ css | cssmin }}
+      {{ css | cssmin }}
     </style>
 
   </head>

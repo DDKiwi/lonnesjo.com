@@ -10,10 +10,20 @@ const config = (eleventy) => {
       .sort((a, b) => b.date - a.date); // newest first
   });
 
+  // Collection for works
+  eleventy.addCollection("works", function (collectionApi) {
+    return collectionApi
+      .getFilteredByGlob("src/works/*.liquid")
+      .sort((a, b) => b.date - a.date); // newest first
+  });
+
   // Minify CSS
   eleventy.addFilter("cssmin", function (code) {
     return new CleanCSS({}).minify(code).styles;
   });
+
+  // Ignore gitignore
+  eleventy.setUseGitIgnore(false);
 
   // Passthrough copy
   eleventy.addPassthroughCopy("CNAME");
@@ -33,19 +43,3 @@ const config = (eleventy) => {
 };
 
 export default config;
-
-/*
-
-Re-run Eleventy when you save
-
-# Add a web server to apply changes and
-# refresh automatically. We’ll also --watch for you.
-npx @11ty/eleventy --serve
-
-# Change the web server’s port—use localhost:8081
-npx @11ty/eleventy --serve --port=8081
-
-# Watch and re-run when files change, without the web server.
-npx @11ty/eleventy --watch
-
-*/

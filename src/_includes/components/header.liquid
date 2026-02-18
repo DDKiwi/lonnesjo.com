@@ -1,0 +1,13 @@
+<header>
+  {% if page.inputPath contains 'post' %}
+    {% if page.inputPath contains 'colophon' %}
+      <a role="link" href="/colophon#updates"><h1>{{ title }}</h1></a>
+    {% else %}
+      <a role="link" href="/journal#writing"><h1>{{ title }}</h1></a>
+    {% endif %}
+  {% elsif page.url != "/" %}
+    <a role="link" href="/"><h1>{{ title }}</h1></a>
+  {% else %}
+    <h1>DVL</h1>
+  {% endif %}
+</header>

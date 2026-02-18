@@ -1,0 +1,42 @@
+---
+title: Daniel Violin Lönnesjö
+description: ""
+nav: true
+---
+
+{% assign pageTitle = post.fields.title | default: title %}
+{% assign pageDescription = post.fields.description | default: description %}
+{% if pageTitle == "Daniel Violin Lönnesjö" %}
+  {% assign fullTitle = "Daniel Violin Lönnesjö" %}
+{% else %}
+  {% assign fullTitle = "Daniel Violin Lönnesjö | " | append: pageTitle %}
+{% endif %}
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{{ fullTitle }}</title>
+
+    <meta content="{{ fullTitle }}" name="title" />
+    <meta content="{{ pageDescription }}" name="description" />
+
+    <link rel="icon" href="/assets/favicon/favicon.ico">
+
+    {% capture css %}
+        {% include "css/style.css" %}
+    {% endcapture %}
+
+    <style>
+    {{ css | cssmin }}
+    </style>
+
+  </head>
+  <body>
+    <main>
+      {{ content }}
+    </main>
+    {% include "components/footer.liquid" %}
+  </body>
+</html>

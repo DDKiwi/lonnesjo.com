@@ -1,9 +1,0 @@
-<div class="langSwitch">
-    {% if lang == "sv" %}
-    <span>SV</span>
-    <a href="/en{{ page.url | replace:'/sv','' }}">EN</a>
-    {% else %}
-    <a href="/sv{{ page.url | replace:'/en','' }}">SV</a>
-    <span>EN</span>
-    {% endif %}
-</div>

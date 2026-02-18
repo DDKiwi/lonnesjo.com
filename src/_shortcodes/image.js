@@ -36,7 +36,7 @@ const responsiveImage = async (src, alt = "", className = "regular") => {
     widths: preset.widths,
     formats: ["webp", "jpeg"],
     outputDir: "./_site/assets/images/optimised/",
-    urlPath: "/assets/images/optimised/",
+    urlPath: "assets/images/optimised/",
     sharpWebpOptions: { quality: 70, effort: 4 },
     sharpJpegOptions: { quality: 80 }
   });
@@ -46,7 +46,7 @@ const responsiveImage = async (src, alt = "", className = "regular") => {
     widths: [20], // tiny width for blur
     formats: ["webp"],
     outputDir: "./_site/assets/images/optimised/lqip/",
-    urlPath: "/assets/images/optimised/lqip/",
+    urlPath: "assets/images/optimised/lqip/",
     sharpWebpOptions: { quality: 20 }
   });
 
